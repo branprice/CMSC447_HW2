@@ -1,0 +1,45 @@
+body {
+    background: #C9D6FF;  
+background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  
+background: linear-gradient(to right, #E2E2E2, #C9D6FF); 
+color: #000;
+}
+
+header {
+    background-color: #13829e;
+    padding: 2em;
+    text-align: center;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.navigation {
+    margin-top: 10px;
+}
+
+.navigation a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main_text {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+    }
+
+    .navigation a {
+        margin: 10px 0;
+    }
+}

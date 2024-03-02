@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+    <section class="main_text">
+        <h1>User Creator</h1>
+        <img src="{{ url_for('static', filename='user.png') }}" alt="user" style="max-width: 30%; height: auto;">
+
+        <p>How to use: First create a user, then you can read it through , then you can delete and update the user by their ID.</p>
+        <body>
+            <h1>List of All Users</h1>
+            <ul>
+                {% for user in users %}
+                    <li>
+                        {{ user[1] }} - Points: {{ user[2] }}
+                        <a href="{{ url_for('edit_user', user_id=user[0]) }}">Edit</a>
+                        <a href="{{ url_for('delete_user', user_id=user[0]) }}">Delete</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <a href="{{ url_for('add_user') }}">Add User</a>
+        </body>
+        </html>
+        
+    </section>
+
+</body>
+
+</html>
